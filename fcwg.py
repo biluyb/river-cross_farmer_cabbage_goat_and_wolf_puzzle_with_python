@@ -32,7 +32,7 @@ def get_move():
     print("\nWhich item do you wish to take across the river? - First left to right then right to left respectively ")
     answer = ""
     while answer.upper() not in ["F", "W", "G", "C"]:
-        answer = input("Just Farmer (f), Wolf (w), Goat (g) or Cabbage (c)? ")
+        answer = input("Just type the letter only! Farmer (f), Wolf (w), Goat (g) or Cabbage (c)?. \nYou can return back by farmer:>>  ")
 
     return answer.upper()
 
@@ -71,10 +71,10 @@ def process_move(move, state):
                 forbidden_item = names[item]
                 break
         # farmer_bank = "Left" if containing_set == 1 else "Right"
-        print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         # print(f"!!  Not allowed - if left alone on the {farmer_bank} bank, the {forbidden_item} would eat the other item.  !!")
-        print(f"!!  one of your items would be eaten!  !!")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print(f"!! WRONG: one of your items would be eaten!  !!")
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         direction = None
     return state, direction
 
